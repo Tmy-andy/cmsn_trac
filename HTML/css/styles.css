@@ -122,6 +122,12 @@ button {
 button:hover {
     background-color: #004d40;
 }
+
+#text-wishes {
+    overflow-y: auto; /* Cho phép cuộn khi nội dung quá dài */
+    height: calc(100vh - 60px); /* Đảm bảo chiều cao của phần này không vượt quá chiều cao của màn hình */
+}
+
 .wishes-list {
     display: flex;
     flex-direction: column;
