@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Kiểm tra đáp án
     function checkAnswer() {
-        const correctAnswer = "HPBD XUÂN";
+        const correctAnswer = "CMSN TRÁC";
         if (answerInput.value.trim().toUpperCase() === correctAnswer) {
             Swal.fire({
                 title: '🎉 Chính xác!',
                 html: `
                     <p>Chuẩn bị nhận quà nè!</p>
                     <div style="margin-top: 15px; font-size: 24px; font-weight: bold; color: #388e3c; background: #e8f5e9; padding: 10px 20px; border-radius: 12px; display: inline-block; box-shadow: 0 0 8px rgba(0,0,0,0.15);">
-                        HAPPY BIRTHDAY XUÂN ❤️
+                        CHÚC MỪNG SINH NHẬT TRÁC ❤️
                     </div>
                 `,
                 icon: 'success',
