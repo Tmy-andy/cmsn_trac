@@ -4,26 +4,26 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #e0f7fa; /* Màu nền pastel nhạt */
-    font-family: 'Arial', sans-serif; /* Sử dụng font chữ đơn giản */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
-    font-size: 16px; /* Giảm kích thước font */
+    font-size: 16px;
 }
 
 h1 {
-    font-size: 2em; /* Giảm kích thước chữ */
-    color: #00796b; /* Màu xanh nhẹ nhàng */
+    font-size: 2em;
+    color: #00796b;
     margin-bottom: 20px;
 }
 
 .container {
     width: 100%;
-    max-width: 600px; /* Điều chỉnh kích thước container */
+    max-width: 600px;
     text-align: center;
-    border-radius: 12px; /* Bo góc vừa phải */
+    border-radius: 12px;
     padding: 30px;
-    background-color: #ffffff; /* Màu nền trắng sáng */
+    background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
@@ -36,9 +36,9 @@ h1 {
 .cake,
 .gift {
     width: 100%;
-    max-width: 500px; /* Điều chỉnh kích thước hình ảnh */
+    max-width: 500px;
     height: auto;
-    border-radius: 10px; /* Bo góc nhẹ */
+    border-radius: 10px;
     margin: 20px 0;
 }
 
@@ -47,19 +47,19 @@ button {
     width: 100%;
     max-width: 400px;
     padding: 12px 16px;
-    font-size: 16px; /* Giảm kích thước chữ */
-    border-radius: 10px; /* Bo góc nhẹ */
+    font-size: 16px;
+    border-radius: 10px;
     margin-top: 15px;
     outline: none;
 }
 
 input {
-    border: 1px solid #00796b; /* Màu viền nhẹ nhàng */
+    border: 1px solid #00796b;
 }
 
 button {
     border: none;
-    background-color: #00796b; /* Màu nền button nhẹ nhàng */
+    background-color: #00796b;
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -67,12 +67,12 @@ button {
 }
 
 button:hover {
-    background-color: #004d40; /* Màu nền khi hover */
+    background-color: #004d40;
 }
 
 @media (max-width: 480px) {
     body {
-        font-size: 14px; /* Giảm kích thước font trên màn hình nhỏ */
+        font-size: 14px;
     }
 
     .container {
@@ -85,9 +85,10 @@ button:hover {
     }
 
     .code-image, .cake, .gift {
-        max-width: 100%; /* Hình ảnh tự động vừa màn hình */
+        max-width: 100%;
     }
 }
+
 .slideshow {
     display: flex;
     align-items: center;
@@ -102,43 +103,62 @@ button:hover {
 }
 
 #slide-image {
-    width: 300px;
-    max-width: 90vw;
+    width: 80vw;
+    max-width: 100%;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .download-btn {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #ffffffcc;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
     border: none;
     border-radius: 50%;
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    transition: background-color 0.2s;
+    font-size: 18px;
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .download-btn:hover {
-    background-color: #eeeeee;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
 }
 
 #prev-btn,
 #next-btn {
     font-size: 24px;
-    padding: 10px 15px;
+    padding: 12px;
     cursor: pointer;
-    background-color: #e0f7fa;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
     border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
 #prev-btn:hover,
 #next-btn:hover {
-    background-color: #b2ebf2;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
 }
 
+#prev-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

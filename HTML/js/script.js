@@ -86,32 +86,32 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- Slideshow logic ---
     const slideImages = [
         "Image/Chúc/IMG_20250423_000927.jpg",
-        "Image/Chúc/IMG_20250423_234710.jpg",
+        "Image/Chúc/IMG_20250423_234627.jpg",
         "Image/Chúc/IMG_1745395066610_1745425491431.jpg",
-        "Image/Chúc/Messenger_creation_D11AC6BE-B767-452F-A99E-BB1490AC7135.jpeg",
-        "Image/Chúc/Messenger_creation_FCA61D2E-91B2-4F3E-8418-41CD079FA9D0.jpeg",
-        "Image/Chúc/Thiệp chúc mừng sinh nhật Xuân..png",
+        "Image/Chúc/Messenger_creation_7EF8903F-35C8-4BCE-BD96-9F8D3E3A35E7_1676053856609.png",
+        "Image/Chúc/IMG_20250423_235104.jpg"
     ];
 
     let currentSlide = 0;
 
-    const slideImage = document.getElementById("slide-image");
-    const downloadLink = document.getElementById("download-link");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
-
     function updateSlide() {
-        slideImage.src = slideImages[currentSlide];
-        downloadLink.href = slideImages[currentSlide];
+        document.getElementById("slide-image").src = slideImages[currentSlide];
     }
 
-    prevBtn.addEventListener("click", () => {
+    document.getElementById("next-btn").addEventListener("click", function () {
+        currentSlide = (currentSlide + 1) % slideImages.length;
+        updateSlide();
+    });
+
+    document.getElementById("prev-btn").addEventListener("click", function () {
         currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
         updateSlide();
     });
 
-    nextBtn.addEventListener("click", () => {
-        currentSlide = (currentSlide + 1) % slideImages.length;
-        updateSlide();
+    document.querySelector(".download-btn").addEventListener("click", function () {
+        const downloadLink = document.getElementById("download-link");
+        downloadLink.setAttribute("href", document.getElementById("slide-image").src);
     });
+
+    updateSlide(); // Cập nhật slide ban đầu
 });
