@@ -123,6 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     updateSlide(); // Cập nhật slide ban đầu
+    const goToTextBtn = document.getElementById("go-to-text-wishes");
+    const textWishesPage = document.getElementById("text-wishes");
+
     goToTextBtn.addEventListener("click", () => {
         Swal.fire({
             title: 'Chắc chưa? 🤔',
