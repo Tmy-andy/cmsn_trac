@@ -96,7 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "Image/Chúc/IMG_1745395066610_1745425491431.jpg",
         "Image/Chúc/Messenger_creation_7EF8903F-35C8-4BCE-BD96-9F8D3E3A35F4.jpg",
         "Image/Chúc/Messenger_creation_B0080B6A-8CAC-4DBE-9A83-978DE4E55D65.jpg",
-        "Image/Chúc/Thiệp sinh nhật Trác.png"
+        "Image/Chúc/Thiệp sinh nhật Trác.png",
+        "Image/Chúc/CMSN_Trac.png"
     ];
 
     let currentSlide = 0;
