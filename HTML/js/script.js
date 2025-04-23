@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }, 500);
 
-            // Chuyển trang
+            // Chuyển trang quà ngay lập tức sau khi hiệu ứng hoàn tất
             setTimeout(() => {
                 codePage.classList.add("fade-out");
                 setTimeout(() => {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     wishesPage.classList.remove("hidden");
                     wishesPage.classList.add("fade-in");
                 }, 600);
-            }, 4000);
+            }, 4000); // Chuyển trang sau 4s, đảm bảo nó chỉ mở sau khi có hiệu ứng quà
         } else {
             Swal.fire({
                 title: 'Nuh-uh~ 😢',
