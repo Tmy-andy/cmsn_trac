@@ -90,75 +90,35 @@ button:hover {
 }
 
 .slideshow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    position: relative;
-}
-
-.slide-frame {
     position: relative;
 }
 
 #slide-image {
-    width: 80vw;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.download-btn {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
     border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    color: #ffffff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.download-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: scale(1.1);
-}
-
-#prev-btn,
-#next-btn {
-    font-size: 24px;
-    padding: 12px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #00796b;
     color: white;
-    border: none;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#prev-btn:hover,
-#next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: scale(1.1);
-}
-
-#prev-btn {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#next-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+button:hover {
+    background-color: #004d40;
 }
