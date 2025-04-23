@@ -54,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
          else {
             Swal.fire({
                 title: 'Nuh-uh~ 😢',
-                text: 'Sai mất rồi, thử lại lần nữa nhé!',
-                text: 'Thử dấu cách và viết dấu xem?',
+                text: 'Thử dấu cách và viết dấu xem? Nhớ CAPSLOCK nhé',
                 icon: 'error',
                 confirmButtonText: 'OK nè 💪',
                 background: '#fff0f6',
