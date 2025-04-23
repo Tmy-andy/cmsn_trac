@@ -127,27 +127,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const textWishesPage = document.getElementById("text-wishes");
 
     goToTextBtn.addEventListener("click", () => {
-        Swal.fire({
-            title: 'Chắc chưa? 🤔',
-            text: 'Bạn đã xem hết ảnh chưa đó?',
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonText: 'Rồi! Cho xem lời chúc 💌',
-            cancelButtonText: 'Để xem tiếp ảnh 🎨',
-            confirmButtonColor: '#4caf50',
-            cancelButtonColor: '#f44336',
-            background: '#fffbea',
-            color: '#5d4037'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                wishesPage.classList.add("fade-out");
-                setTimeout(() => {
-                    wishesPage.classList.add("hidden");
-                    textWishesPage.classList.remove("hidden");
-                    textWishesPage.classList.add("fade-in");
-                }, 600);
-            }
-        });
+        wishesPage.classList.add("fade-out");
+        setTimeout(() => {
+            wishesPage.classList.add("hidden");
+            textWishesPage.classList.remove("hidden");
+            textWishesPage.classList.add("fade-in");
+        }, 600);
     });
+
     
 });
