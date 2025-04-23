@@ -82,4 +82,36 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+
+    // --- Slideshow logic ---
+    const slideImages = [
+        "Image/Chúc/IMG_20250423_000927.jpg",
+        "Image/Chúc/IMG_20250423_234710.jpg",
+        "Image/Chúc/IMG_1745395066610_1745425491431.jpg",
+        "Image/Chúc/Messenger_creation_D11AC6BE-B767-452F-A99E-BB1490AC7135.jpeg",
+        "Image/Chúc/Messenger_creation_FCA61D2E-91B2-4F3E-8418-41CD079FA9D0.jpeg",
+        "Image/Chúc/Thiệp chúc mừng sinh nhật Xuân..png",
+    ];
+
+    let currentSlide = 0;
+
+    const slideImage = document.getElementById("slide-image");
+    const downloadLink = document.getElementById("download-link");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    function updateSlide() {
+        slideImage.src = slideImages[currentSlide];
+        downloadLink.href = slideImages[currentSlide];
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+        updateSlide();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slideImages.length;
+        updateSlide();
+    });
 });
