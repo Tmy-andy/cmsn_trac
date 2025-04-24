@@ -138,55 +138,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    const specialGiftSection = document.getElementById("special-gift");
-    const chestSound = document.getElementById("chest-sound");
-    let giftShown = false;
-    
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY + window.innerHeight;
-        const bodyHeight = document.body.offsetHeight;
-    
-        if (scrollY >= bodyHeight - 50 && !giftShown) {
-            giftShown = true;
-    
-            specialGiftSection.classList.remove("hidden");
-            specialGiftSection.classList.add("fade-in");
-    
-            chestSound.play(); // Phát âm thanh
-        }
-    });
-    
-    // Khi nhấp vào rương → chuyển sang trang profile
-    specialGiftSection.addEventListener("click", () => {
-        window.location.href = "profile.html";
-    });
+    // --- Hiện rương khi cuộn tới cuối text wishes ---
+    const textWishes = document.getElementById("text-wishes");
+    const specialGift = document.getElementById("special-gift");
+    const profileContainer = document.querySelector(".profile-container");
     const profileImg = document.getElementById("profile-img");
     const popup = document.getElementById("popup");
-    const closeBtn = document.getElementById("close-popup");
-    const downloadBtn = document.getElementById("download-all");
+    const closePopup = document.getElementById("close-popup");
 
+    textWishes.addEventListener("scroll", () => {
+        if (textWishes.scrollTop + textWishes.clientHeight >= textWishes.scrollHeight - 50) {
+            specialGift.classList.remove("hidden");
+        }
+    });
+
+    // --- Nhấp vào rương thì hiện profile ---
+    specialGift.addEventListener("click", () => {
+        specialGift.classList.add("hidden");
+        profileContainer.classList.remove("hidden");
+
+        // Phát âm thanh nếu muốn
+        const chestSound = document.getElementById("chest-sound");
+        chestSound.play();
+    });
+
+    // --- Nhấp vào ảnh profile thì hiện popup ---
     profileImg.addEventListener("click", () => {
         popup.classList.remove("hidden");
     });
 
-    closeBtn.addEventListener("click", () => {
+    // --- Đóng popup ---
+    closePopup.addEventListener("click", () => {
         popup.classList.add("hidden");
-    });
-
-    downloadBtn.addEventListener("click", () => {
-        const images = [
-            { src: "Image/profile.jpg", name: "profile.jpg" },
-            { src: "Image/special-gift.jpg", name: "gift.jpg" }
-        ];
-
-        images.forEach(image => {
-            const a = document.createElement("a");
-            a.href = image.src;
-            a.download = image.name;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        });
     });
 
     
