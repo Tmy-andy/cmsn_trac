@@ -8,6 +8,7 @@
     <!-- SweetAlert2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <audio id="chest-sound" src="Sound/chest-open.mp3" preload="auto"></audio>
 </head>
 <body>
     <div id="birthday-cake" class="container">
@@ -71,9 +72,35 @@
 
                 Và thật hạnh phúc nếu chúng ta có thêm thật nhiều lần cùng nhau đón dịp quan trọng này. Sinh nhật vui vẻ nhé.
             </div>
+            <div class="wish-box">
+                Chúc mừng sinh nhật Trác nhé! Chúc cậu tuổi mới thật nhiều sức khỏe, bình an và luôn giữ được “chất riêng” như sắc đen cậu yêu thích. Mong rằng năm nay, năm sau và năm sau nữa sẽ là một hành trình đáng nhớ với nhiều trải nghiệm thú vị của cậu!
+            </div>
+        </div>
+    </div>
+
+    <!-- RƯƠNG LẮC LƯ VÀ DÒNG CHỮ -->
+    <div id="special-gift" class="hidden">
+        <img src="Image/chest.gif" alt="Rương" style="width: 100px;">
+        <p>Special gift - Nhấp vào đi</p>
+    </div>
+
+    <!-- Âm thanh rương mở -->
+
+    <div class="profile-container">
+        <img id="profile-img" src="Image/profile.jpg" alt="Ảnh Profile" style="width: 300px; cursor: pointer;">
+    </div>
+
+    <!-- Popup ảnh -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="close-popup" class="close-btn">✖</span>
+            <img src="Image/special-gift.jpg" id="popup-img" style="max-width: 90%;">
+            <br>
+            <button id="download-all">Tải cả hai ảnh</button>
         </div>
     </div>
 
     <script src="js/script.js"></script>
+
 </body>
 </html>

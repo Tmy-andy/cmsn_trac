@@ -97,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "Image/Chúc/Messenger_creation_7EF8903F-35C8-4BCE-BD96-9F8D3E3A35F4.jpg",
         "Image/Chúc/Messenger_creation_B0080B6A-8CAC-4DBE-9A83-978DE4E55D65.jpg",
         "Image/Chúc/Thiệp sinh nhật Trác.png",
-        "Image/Chúc/CMSN_Trac.png"
+        "Image/Chúc/CMSN_Trac.png",
+        "Image/Chúc/dea8081a-3efb-4835-837a-d4aec4777cf0.jpg"
     ];
 
     let currentSlide = 0;
@@ -134,6 +135,58 @@ document.addEventListener("DOMContentLoaded", function () {
             textWishesPage.classList.remove("hidden");
             textWishesPage.classList.add("fade-in");
         }, 600);
+    });
+
+
+    const specialGiftSection = document.getElementById("special-gift");
+    const chestSound = document.getElementById("chest-sound");
+    let giftShown = false;
+    
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY + window.innerHeight;
+        const bodyHeight = document.body.offsetHeight;
+    
+        if (scrollY >= bodyHeight - 50 && !giftShown) {
+            giftShown = true;
+    
+            specialGiftSection.classList.remove("hidden");
+            specialGiftSection.classList.add("fade-in");
+    
+            chestSound.play(); // Phát âm thanh
+        }
+    });
+    
+    // Khi nhấp vào rương → chuyển sang trang profile
+    specialGiftSection.addEventListener("click", () => {
+        window.location.href = "profile.html";
+    });
+    const profileImg = document.getElementById("profile-img");
+    const popup = document.getElementById("popup");
+    const closeBtn = document.getElementById("close-popup");
+    const downloadBtn = document.getElementById("download-all");
+
+    profileImg.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        popup.classList.add("hidden");
+    });
+
+    downloadBtn.addEventListener("click", () => {
+        const images = [
+            { src: "Image/profile.jpg", name: "profile.jpg" },
+            { src: "Image/special-gift.jpg", name: "gift.jpg" }
+        ];
+
+        images.forEach(image => {
+            const a = document.createElement("a");
+            a.href = image.src;
+            a.download = image.name;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
     });
 
     
