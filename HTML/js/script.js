@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => fadeOut(codePage, () => fadeIn(wishesPage)), 4000);
       } else {
         Swal.fire({
-          title: 'Nuh-uh~ 😢',
-          html: `<p>Thử dấu cách và viết dấu xem? Nhớ CAPSLOCK nha!</p>
+          title: 'Nuh-uh~ Sai rồi😢',
+          html: `<p>Tip: Thử dấu cách và viết dấu xem? Nhớ CAPSLOCK nha!</p>
                  <img src="https://media.giphy.com/media/10dU7AN7xsi1I4/giphy.gif"
                       alt="sad cat" style="width:100%;max-width:250px;
                       margin-top:12px;border-radius:8px;"/>`,
