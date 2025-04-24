@@ -234,13 +234,14 @@ button:hover {
 }
 /* Trang cuối hiển thị ảnh full-screen */
 #last-page {
+    display: block !important;
     padding: 0;
     margin: 0;
     background: black;
   }
   #last-page.hidden {
     display: none;
-  }
+  }  
   
   /* Popup cuối cùng */
 #final-popup {

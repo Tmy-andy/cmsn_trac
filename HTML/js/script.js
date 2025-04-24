@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const finalPopup    = document.getElementById("final-popup");
     const viewFinalBtn  = document.getElementById("view-final");
     const forceViewBtn  = document.getElementById("force-view");
-    const lastPage      = document.getElementById("last-page");
+    const lastPage = document.getElementById("last-page");
 
     downloadAllBtn?.addEventListener("click", () => {
         // URL của hai ảnh cần tải
@@ -183,8 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cả hai nút đều dẫn tới trang cuối
     viewFinalBtn?.addEventListener("click", goToLastPage);
     forceViewBtn?.addEventListener("click", goToLastPage);
-
-
 
     // Kick off
     showCakeThenCode();
