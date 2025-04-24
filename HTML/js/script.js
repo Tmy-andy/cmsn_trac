@@ -117,6 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
       specialGift.addEventListener("click", () => {
         specialGift.classList.add("hidden");
+        // Ẩn luôn phần text-wishes
+        fadeOut(textWishes);
+        // Hiện ảnh profile
         profileContainer.classList.remove("hidden");
         document.getElementById("chest-sound")?.play();
       });
