@@ -112,7 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
       textWishes.addEventListener("scroll", () => {
         if (textWishes.scrollTop + textWishes.clientHeight >= textWishes.scrollHeight - 50) {
-          specialGift.classList.remove("hidden");
+            setTimeout(() => {
+                specialGift.classList.remove("hidden");
+              }, 4000);
         }
       });
   
