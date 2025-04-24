@@ -86,7 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Image/Chúc/Messenger_creation_B0080B6A-8CAC-4DBE-9A83-978DE4E55D65.jpg",
         "Image/Chúc/Thiệp sinh nhật Trác.png",
         "Image/Chúc/CMSN_Trac.png",
-        "Image/Chúc/dea8081a-3efb-4835-837a-d4aec4777cf0.jpg"
+        "Image/Chúc/dea8081a-3efb-4835-837a-d4aec4777cf0.jpg",
+        "Image/DT.jpg"
       ];
       let idx = 0;
       const imgEl = document.getElementById("slide-image");
@@ -165,25 +166,9 @@ document.addEventListener("DOMContentLoaded", () => {
           a.remove();
         });
       
-        // Sau đó hiện popup cuối
-        finalPopup.classList.remove("hidden");
       });      
 
-    function goToLastPage() {
-    // Ẩn tất cả màn hình trước
-    finalPopup.classList.add("hidden");
-    popup.classList.add("hidden");
-    profileContainer.classList.add("hidden");
-    textWishes.classList.add("hidden");
-    wishesPage.classList.add("hidden");
-    // Hiện trang cuối
-    lastPage.classList.remove("hidden");
-    }
-
-    // Cả hai nút đều dẫn tới trang cuối
-    viewFinalBtn?.addEventListener("click", goToLastPage);
-    forceViewBtn?.addEventListener("click", goToLastPage);
-
+    
     // Kick off
     showCakeThenCode();
     initSlideshow();
