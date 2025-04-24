@@ -177,12 +177,12 @@ document.addEventListener("DOMContentLoaded", () => {
     textWishes.classList.add("hidden");
     wishesPage.classList.add("hidden");
     // Hiện trang cuối
-    //lastPage.classList.remove("hidden");
-    //}
+    lastPage.classList.remove("hidden");
+    }
 
     // Cả hai nút đều dẫn tới trang cuối
-    //viewFinalBtn?.addEventListener("click", goToLastPage);
-    //forceViewBtn?.addEventListener("click", goToLastPage);
+    viewFinalBtn?.addEventListener("click", goToLastPage);
+    forceViewBtn?.addEventListener("click", goToLastPage);
 
 
 
