@@ -126,51 +126,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateSlide(); // Cập nhật slide ban đầu
     const goToTextBtn = document.getElementById("go-to-text-wishes");
-    const textWishesPage = document.getElementById("text-wishes");
-
-    goToTextBtn.addEventListener("click", () => {
-        wishesPage.classList.add("fade-out");
-        setTimeout(() => {
-            wishesPage.classList.add("hidden");
-            textWishesPage.classList.remove("hidden");
-            textWishesPage.classList.add("fade-in");
-        }, 600);
+    btnGoToTextWishes.addEventListener("click", () => {
+        document.getElementById("birthday-wishes").classList.add("hidden");
+        document.getElementById("text-wishes").classList.remove("hidden");
+    
+        // Kích hoạt kiểm tra scroll để hiện rương
+        activateGiftScroll();
     });
-
-
-    // --- Hiện rương khi cuộn tới cuối text wishes ---
-    const textWishes = document.getElementById("text-wishes");
-    const specialGift = document.getElementById("special-gift");
-    const profileContainer = document.querySelector(".profile-container");
-    const profileImg = document.getElementById("profile-img");
-    const popup = document.getElementById("popup");
-    const closePopup = document.getElementById("close-popup");
-
-    textWishes.addEventListener("scroll", () => {
-        if (textWishes.scrollTop + textWishes.clientHeight >= textWishes.scrollHeight - 50) {
-            specialGift.classList.remove("hidden");
-        }
-    });
-
-    // --- Nhấp vào rương thì hiện profile ---
-    specialGift.addEventListener("click", () => {
-        specialGift.classList.add("hidden");
-        profileContainer.classList.remove("hidden");
-
-        // Phát âm thanh nếu muốn
-        const chestSound = document.getElementById("chest-sound");
-        chestSound.play();
-    });
-
-    // --- Nhấp vào ảnh profile thì hiện popup ---
-    profileImg.addEventListener("click", () => {
-        popup.classList.remove("hidden");
-    });
-
-    // --- Đóng popup ---
-    closePopup.addEventListener("click", () => {
-        popup.classList.add("hidden");
-    });
-
+    
+    function activateGiftScroll() {
+        const textWishes = document.getElementById("text-wishes");
+        const specialGift = document.getElementById("special-gift");
+        const profileContainer = document.querySelector(".profile-container");
+        const profileImg = document.getElementById("profile-img");
+        const popup = document.getElementById("popup");
+        const closePopup = document.getElementById("close-popup");
+    
+        textWishes.addEventListener("scroll", () => {
+            if (textWishes.scrollTop + textWishes.clientHeight >= textWishes.scrollHeight - 50) {
+                specialGift.classList.remove("hidden");
+            }
+        });
+    
+        specialGift.addEventListener("click", () => {
+            specialGift.classList.add("hidden");
+            profileContainer.classList.remove("hidden");
+            document.getElementById("chest-sound").play();
+        });
+    
+        profileImg.addEventListener("click", () => {
+            popup.classList.remove("hidden");
+        });
+    
+        closePopup.addEventListener("click", () => {
+            popup.classList.add("hidden");
+        });
+    }
     
 });
