@@ -242,9 +242,6 @@ button:hover {
   #last-page.hidden {
     display: none !important;
   }
-  #last-page img {
-    display: block;
-  }
   
   /* Popup cuối cùng */
 #final-popup {
