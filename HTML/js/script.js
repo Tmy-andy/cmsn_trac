@@ -140,6 +140,36 @@ document.addEventListener("DOMContentLoaded", () => {
       activateGiftScroll();
     });
   
+
+    // --- Popup cuối và chuyển trang cuối ---
+    const downloadAllBtn = document.getElementById("download-all");
+    const finalPopup    = document.getElementById("final-popup");
+    const viewFinalBtn  = document.getElementById("view-final");
+    const forceViewBtn  = document.getElementById("force-view");
+    const lastPage      = document.getElementById("last-page");
+
+    downloadAllBtn?.addEventListener("click", () => {
+    // Hiện popup cuối sau khi người dùng bấm tải
+    finalPopup.classList.remove("hidden");
+    });
+
+    function goToLastPage() {
+    // Ẩn tất cả màn hình trước
+    finalPopup.classList.add("hidden");
+    popup.classList.add("hidden");
+    profileContainer.classList.add("hidden");
+    textWishes.classList.add("hidden");
+    wishesPage.classList.add("hidden");
+    // Hiện trang cuối
+    lastPage.classList.remove("hidden");
+    }
+
+    // Cả hai nút đều dẫn tới trang cuối
+    viewFinalBtn?.addEventListener("click", goToLastPage);
+    forceViewBtn?.addEventListener("click", goToLastPage);
+
+
+
     // Kick off
     showCakeThenCode();
     initSlideshow();
