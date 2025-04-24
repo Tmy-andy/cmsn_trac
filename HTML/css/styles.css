@@ -197,13 +197,11 @@ button:hover {
     display: none !important;
 }
 
-#profile-img {
-    width: auto;
-    max-width: 90vw;    /* Chiều ngang tối đa 90% viewport */
-    max-height: 90vh;   /* Chiều cao tối đa 90% viewport */
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+/* Nếu muốn ảnh phủ trọn hoàn toàn */
+#profile-img.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain; /* Giữ tỉ lệ hình */
 }
 
 
