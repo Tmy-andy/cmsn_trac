@@ -149,9 +149,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const lastPage      = document.getElementById("last-page");
 
     downloadAllBtn?.addEventListener("click", () => {
-    // Hiện popup cuối sau khi người dùng bấm tải
-    finalPopup.classList.remove("hidden");
-    });
+        // URL của hai ảnh cần tải
+        const urls = [
+          "Image/profile.jpg",
+          "Image/special-gift.jpg"
+        ];
+      
+        urls.forEach((url) => {
+          const a = document.createElement("a");
+          a.href = url;
+          // Đặt tên file tương ứng:
+          a.download = url.split("/").pop();
+          document.body.append(a);
+          a.click();
+          a.remove();
+        });
+      
+        // Sau đó hiện popup cuối
+        finalPopup.classList.remove("hidden");
+      });      
 
     function goToLastPage() {
     // Ẩn tất cả màn hình trước
